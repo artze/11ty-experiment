@@ -1,0 +1,10 @@
+---
+permalink: /search-index.json
+---
+[
+  {% for post in collections.posts %}
+  {
+    "templateContent": "{{ post.url}}"
+  } {% if not loop.last %},{% endif %}
+  {% endfor %}
+]
